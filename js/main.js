@@ -5,8 +5,9 @@ createApp({
     return {
       tasks: [
         { text: "Work out", done: true },
-        { text: "Team meating", done: true },
-        { text: "Hand off the project", done: false },
+        { text: "Team meating", done: false },
+        { text: "Hand off the project", done: true },
+        { text: "Read 5 pages", done: false },
       ],
 
       newTask: "",
@@ -24,12 +25,12 @@ createApp({
       this.tasks.splice(i, 1);
     },
 
-    lineThrough(i) {
-      if (this.tasks[i].done) {
-        return;
-      } else {
-        return this.taskHaveToDO;
-      }
-    },
+    // lineThrough(i) {
+    //   if (this.tasks[i].done) {
+    //     return;
+    //   } else {
+    //     return this.taskHaveToDO;
+    //   }
+    // },
   },
 }).mount("#app");

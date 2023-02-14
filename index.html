@@ -125,11 +125,12 @@
                 @click="trueFalse(index)"
                 v-for="(task, index) in tasks"
                 class="list-group-item d-flex align-items-center"
-                :class="lineThrough(index)"
+                :class="(task.done) ? '' : 'lineThrough' "
               >
                 {{ task.text }}
                 <span @click="removeTask(index)" class="badge ms-auto"
                   ><i class="fa-solid fa-circle-check border-color fs-6"></i
+                  ><i class="fa-solid fa-trash-can border-color fs-6 ms-3"></i
                 ></span>
               </li>
             </ul>
