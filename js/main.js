@@ -10,27 +10,34 @@ createApp({
         { text: "Read 5 pages", done: false },
       ],
 
-      newTask: "",
-      taskHaveToDO: "lineThrough",
+      newTask: {
+        text: "",
+        done: false,
+      },
     };
   },
 
   methods: {
     addTask() {
-      // console.log(this.newTask);
-      this.tasks.push({ text: this.newTask, done: true });
+      const newTaskCopy = {
+        ...this.newTask,
+      };
+
+      const newTaskCopy2 = {
+        text: this.newTask.text,
+        done: false,
+      };
+
+      this.tasks.push(newTaskCopy);
+      this.newTask.text = "";
     },
 
     removeTask(i) {
       this.tasks.splice(i, 1);
     },
 
-    // lineThrough(i) {
-    //   if (this.tasks[i].done) {
-    //     return;
-    //   } else {
-    //     return this.taskHaveToDO;
-    //   }
-    // },
+    doneToDo(task) {
+      task.done = !task.done;
+    },
   },
 }).mount("#app");

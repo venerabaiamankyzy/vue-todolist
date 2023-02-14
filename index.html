@@ -106,7 +106,7 @@
               ></span>
 
               <input
-                v-model="newTask"
+                v-model="newTask.text"
                 type="text"
                 class="form-control"
                 placeholder="What is your next task?"
@@ -120,14 +120,15 @@
             </div>
 
             <!-- lista di ToDo-->
-            <ul class="list-group list-group-numbered">
+            <ul class="list-group">
               <li
-                @click="trueFalse(index)"
                 v-for="(task, index) in tasks"
                 class="list-group-item d-flex align-items-center"
-                :class="(task.done) ? '' : 'lineThrough' "
+                :class="(task.done) ? 'lineThrough' : '' "
               >
-                {{ task.text }}
+                <span @click="doneToDo(task)">
+                  {{index}} . {{ task.text }}</span
+                >
                 <span @click="removeTask(index)" class="badge ms-auto"
                   ><i class="fa-solid fa-circle-check border-color fs-6"></i
                   ><i class="fa-solid fa-trash-can border-color fs-6 ms-3"></i
