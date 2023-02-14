@@ -1,6 +1,6 @@
 _Esercizio di oggi:_
 
-#### Vue To-Do List:
+### Vue To-Do List:
 
 **_This is my work:_**
 ![](./img/myWork.png)
@@ -12,7 +12,8 @@ _Esercizio di oggi:_
 - text, una stringa che indica il testo del todo
 - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
-**MILESTONE 1**
+  **MILESTONE 1**
+
 Stampare all'interno di una lista HTML un item per ogni todo.
 Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
