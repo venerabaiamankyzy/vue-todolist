@@ -5,7 +5,7 @@ _Esercizio di oggi:_
 **_This is my work:_**
 ![](./img/myWork.png)
 
-> ** # Descrizione:**
+> **Descrizione:**
 > Rifare l'esercizio della to do list.
 > Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 
